@@ -449,10 +449,11 @@ input {
     }
 
     input {
-        margin-top: 8.5px;
+        margin-top: 10px;
         height: 9px;
         width: 35px;
         font-size: 9px;
+        border: 1px solid #787777;
     }
 
     .one-foot-item-amount, .one-foot-item-p {

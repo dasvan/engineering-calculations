@@ -127,7 +127,7 @@ body {
 .one-body-left-item {
     padding: 10px 0 0 10px;
     font-family: "JBMono", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
 }
 
@@ -150,7 +150,7 @@ input {
 .amount-p {
     text-align: center;
     font-family: "JBMono", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0;
 }
 

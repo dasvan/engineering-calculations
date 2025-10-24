@@ -411,21 +411,21 @@ input {
     }
 
     .mode {
-        width: 76px;
-        height: 22px;
-        font-size: 9px;
+        width: 93px;
+        height: 27px;
+        font-size: 11px;
         transition: 0.3s;
     }
 
     .one, .two, .three, .four, .five, .six {
-        grid-template-rows: 37px auto 33.8px;
+       grid-template-rows: 45px auto 41.2px;
     }
     .paragraph {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .one-head {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .one-body {
@@ -433,7 +433,7 @@ input {
     }
 
     .one-item {
-        padding: 6px;
+       padding: 7px;
     }
 
     .play {
@@ -445,23 +445,23 @@ input {
     }
 
     .one-body-left-item {
-        font-size: 9px;
+        font-size: 11px;
     }
 
     input {
         margin-top: 11px;
-        height: 9px;
+        height: 12px;
         width: 35px;
         font-size: 9px;
         border: 1px solid #787777;
     }
 
     .one-foot-item-amount, .one-foot-item-p {
-        font-size: 8.5px;
+        font-size: 11px;
     }
 
     .footer {
         margin: 30px 0 23px 0;
-        font-size: 11px;
+        font-size: 13px;
     }
 }

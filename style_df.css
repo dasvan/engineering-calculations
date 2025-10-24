@@ -411,9 +411,9 @@ input {
     }
 
     .mode {
-        width: 93px;
+        width: 94px;
         height: 27px;
-        font-size: 11px;
+        font-size: 67%;
         transition: 0.3s;
     }
 

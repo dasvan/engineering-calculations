@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_df.css">
+    <link rel="icon" href="img/Test%20Tube.png">
+    <title>drilling fluids</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="container-item header">
+        <div class="header-items mode" onclick="stillInWork()"><a>🌚 dark mode</a></div>
+    </div>
+    <div class="container-item body">
+        <div class="body-item paragraph">choose that you need:</div>
+        <div class="body-item items">
+            <div class="body-items one">
+                <div class="grid">
+                    <div class="one-item one-head">mud weighting</div>
+                    <div class="grid-item play" onclick="mudWeighting()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">final mud density, g/сm3: </div>
+                        <div class="one-body-left-item">start mud volume, m3: </div>
+                        <div class="one-body-left-item">start mud density, g/сm3: </div>
+                        <div class="one-body-left-item">weighting density, g/сm3: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="finalMudDensity"></div>
+                        <div class="one-body-right-container"><input type="number" class="startMudVolume"></div>
+                        <div class="one-body-right-container"><input type="number" class="startMudDensity"></div>
+                        <div class="one-body-right-container"><input type="number" class="weightingDensity"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of weight, kg:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p mudWeighting"></p></div>
+                </div>
+            </div>
+            <div class="body-items two">
+                <div class="grid">
+                    <div class="one-item one-head">annulus velocity</div>
+                    <div class="grid-item play" onclick="annulusVelocity()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">drill bit diameter, mm: </div>
+                        <div class="one-body-left-item">drill string diameter, mm: </div>
+                        <div class="one-body-left-item">pump performance, l/sec: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="drillBitDiameter"></div>
+                        <div class="one-body-right-container"><input type="number" class="drillStringDiameter"></div>
+                        <div class="one-body-right-container"><input type="number" class="pumpPerformance"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of velocity, m/sec:</div>
+                    <div class="one-foot-item"><p class="two-foot-item-p amount-p annulusVelocity"></p></div>
+                </div>
+            </div>
+            <div class="body-items three">
+                <div class="grid">
+                    <div class="one-item one-head">density mixing muds</div>
+                    <div class="grid-item play" onclick="densityMixingMuds()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">mixing density, g/cm3: </div>
+                        <div class="one-body-left-item">start mud volume, m3: </div>
+                        <div class="one-body-left-item">start mud density, g/cm3: </div>
+                        <div class="one-body-left-item">density add mud, g/cm3: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="mixingDensity"></div>
+                        <div class="one-body-right-container"><input type="number" class="startMudVolume-2"></div>
+                        <div class="one-body-right-container"><input type="number" class="startMudDensity-2"></div>
+                        <div class="one-body-right-container"><input type="number" class="densityAddMud"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">volume of add mud, m3:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p densityMixingMuds"></p></div>
+                </div>
+            </div>
+            <div class="body-items four">
+                <div class="grid">
+                    <div class="one-item one-head">volume of pit</div>
+                    <div class="grid-item play" onclick="volumeOfPit()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">length, m: </div>
+                        <div class="one-body-left-item">width, m: </div>
+                        <div class="one-body-left-item">height, m: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="length"></div>
+                        <div class="one-body-right-container"><input type="number" class="width"></div>
+                        <div class="one-body-right-container"><input type="number" class="height"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">volume of pit, m3:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p volumeOfPit"></p></div>
+                </div>
+            </div>
+            <div class="body-items five">
+                <div class="grid">
+                    <div class="one-item one-head grid-item">OWR</div>
+                    <div class="grid-item play" onclick="OWR()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">oil, ml: </div>
+                        <div class="one-body-left-item">water, ml: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="oil"></div>
+                        <div class="one-body-right-container"><input type="number" class="water"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of OWR:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p OWR"></p></div>
+                </div>
+            </div>
+            <div class="body-items six">
+                <div class="grid">
+                    <div class="one-item one-head grid-item">density when add mud</div>
+                    <div class="grid-item play" onclick="densityWhenAddMud()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">volume adding mud, m3: </div>
+                        <div class="one-body-left-item">density adding mud, kg/m3: </div>
+                        <div class="one-body-left-item">volume start mud, m3: </div>
+                        <div class="one-body-left-item">density start mud, kg/m3: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="volumeAddingMud"></div>
+                        <div class="one-body-right-container"><input type="number" class="densityAddingMud"></div>
+                        <div class="one-body-right-container"><input type="number" class="volumeStartMud"></div>
+                        <div class="one-body-right-container"><input type="number" class="densityStartMud"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">end mud density, kg/m3:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p densityWhenAddMud"></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-item footer">made by dasvan9</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

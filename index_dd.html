@@ -3,24 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="style_dd.css">
     <link rel="icon" href="img/Gear.png">
     <title>directional drilling</title>
 </head>
 <body>
 <div class="main-container">
     <div class="container-item header">
-        <div class="header-items mode"><a>🌚 dark mode</a></div>
+        <div class="header-items mode" onclick="stillInWork()"><a>🌚 dark mode</a></div>
     </div>
-    <div class="container-item paragraph">
-        <div class="paragraph-item">engineering calculations</div>
+    <div class="container-item body">
+        <div class="body-item paragraph">make a calculation:</div>
+        <div class="body-item items">
+            <div class="body-items one">
+                <div class="grid">
+                    <div class="one-item one-head">deviation from vertical</div>
+                    <div class="grid-item play" onclick="deviationFromVertical()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">projection north-south, m: </div>
+                        <div class="one-body-left-item">projection east-west, m: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="projectionNorthSouth"></div>
+                        <div class="one-body-right-container"><input type="number" class="projectionEastWest"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of deviation, m:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p deviationFromVertical"></p></div>
+                </div>
+            </div>
+            <div class="body-items two">
+                <div class="grid">
+                    <div class="one-item one-head">offset: LHE</div>
+                    <div class="grid-item play" onclick="offsetLHE()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">motor mark to t/s mark, mm: </div>
+                        <div class="one-body-left-item">motor circumference, mm: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="telemetrySystemMark"></div>
+                        <div class="one-body-right-container"><input type="number" class="downholeMotorCircumference"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of offset, deg:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p annulusVelocity offsetLHE"></p></div>
+                </div>
+            </div>
+            <div class="body-items three">
+                <div class="grid">
+                    <div class="one-item one-head">offset: any telesystem</div>
+                    <div class="grid-item play" onclick="offsetAny()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">t/s mark to motor mark, mm: </div>
+                        <div class="one-body-left-item">motor circumference, mm: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="markToMotor"></div>
+                        <div class="one-body-right-container"><input type="number" class="motorCircumference"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of offset, deg:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p offsetAny"></p></div>
+                </div>
+            </div>
+            <div class="body-items four">
+                <div class="grid">
+                    <div class="one-item one-head">inclination angle</div>
+                    <div class="grid-item play" onclick="inclinationAngle()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">Gx: </div>
+                        <div class="one-body-left-item">Gy: </div>
+                        <div class="one-body-left-item">Gz: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="Gx"></div>
+                        <div class="one-body-right-container"><input type="number" class="Gy"></div>
+                        <div class="one-body-right-container"><input type="number" class="Gz"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of inclination, deg:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p inclinationAngle"></p></div>
+                </div>
+            </div>
+            <div class="body-items five">
+                <div class="grid">
+                    <div class="one-item one-head grid-item">magnetic azimut</div>
+                    <div class="grid-item play" onclick="magneticAzimut()">▶️</div>
+                </div>
+                <div class="one-item one-body two-columns">
+                    <div class="one-body-left two-columns-left">
+                        <div class="one-body-left-item-par">
+                            <div class="one-body-left-item">Gx: </div>
+                            <div class="one-body-left-item">Gy: </div>
+                            <div class="one-body-left-item">Gz: </div>
+                        </div>
+                        <div class="one-body-left-item-input">
+                            <div class="one-body-right-container"><input type="number" class="Gx-azimut"></div>
+                            <div class="one-body-right-container"><input type="number" class="Gy-azimut"></div>
+                            <div class="one-body-right-container"><input type="number" class="Gz-azimut"></div>
+                        </div>
+                    </div>
+                    <div class="one-body-right two-columns-right">
+                        <div class="one-body-right-item-par">
+                            <div class="one-body-left-item">Bx: </div>
+                            <div class="one-body-left-item">By: </div>
+                            <div class="one-body-left-item">Bz: </div>
+                        </div>
+                        <div class="one-body-right-item-input">
+                            <div class="one-body-right-container"><input type="number" class="Bx-azimut"></div>
+                            <div class="one-body-right-container"><input type="number" class="By-azimut"></div>
+                            <div class="one-body-right-container"><input type="number" class="Bz-azimut"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of azimut, deg:</div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p magneticAzimut"></p></div>
+                </div>
+            </div>
+            <div class="body-items six">
+                <div class="grid">
+                    <div class="one-item one-head grid-item">slide/rotor</div>
+                    <div class="grid-item play" onclick="slideRotor()">▶️</div>
+                </div>
+                <div class="one-item one-body">
+                    <div class="one-body-left">
+                        <div class="one-body-left-item">meters in rotor, m: </div>
+                        <div class="one-body-left-item">meters in slide, m: </div>
+                    </div>
+                    <div class="one-body-right">
+                        <div class="one-body-right-container"><input type="number" class="metersInRotor"></div>
+                        <div class="one-body-right-container"><input type="number" class="metersInSlide"></div>
+                    </div>
+                </div>
+                <div class="one-item one-foot">
+                    <div class="one-foot-item-amount">amount of slide/rotor: </div>
+                    <div class="one-foot-item"><p class="one-foot-item-p amount-p slideRotor"></p></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container-item buttons">
-        <div class="buttons-item"><a class="pages" href="index_df.html"><button class="button1">🧪 drilling fluids</button></a></div>
-        <div class="buttons-item"><a class="pages" href="index_dd.html"><button class="button2">⚙️ directional drilling</button></a></div>
-    </div>
+    <div class="container-item footer">made by dasvan9</div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,502 @@
+@font-face {
+    font-family: "JBMono";
+    src: url("fonts/JetBrainsMono.ttf");
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 84px auto auto;
+    align-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 20px;
+}
+
+.header-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode {
+    font-family: "JBMono", sans-serif;
+    font-weight: 600;
+    padding: 0;
+    background-color: white;
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    border: solid 2px black;
+    cursor: pointer;
+    color: black;
+    box-shadow: 5px 5px 0 black;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.mode:hover {
+    box-shadow: 10px 10px 0 black;
+    bottom: 3px;
+    right: 3px;
+    color: #818181;
+}
+
+.body {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 0 160px 0 160px;
+}
+
+.paragraph {
+    font-size: 65px;
+    font-family: "JBMono", sans-serif;
+    font-weight: 1000;
+    margin: 25px 0 35px 0;
+    transition: 0.3s;
+}
+
+.items {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 25px;
+}
+
+.body-items {
+    height: 100%;
+}
+
+.one-head {
+    font-size: 25px;
+    font-family: "JBMono", sans-serif;
+    font-weight: 800;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #eacba0;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.grid-item {
+    font-size: 25px;
+}
+
+.play {
+    align-self: center;
+    padding: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.one-item {
+    padding: 10px;
+}
+
+.one, .two, .three, .four, .five, .six {
+    display: grid;
+    grid-template-rows: 53px auto 48.5px;
+}
+
+.one-body {
+    display: grid;
+    grid-template-columns: 2fr auto;
+}
+
+.body-items {
+    border: black solid 2px;
+    box-shadow: 5px 5px 0 black;
+}
+
+.one-body-left-item {
+    padding: 10px 0 0 10px;
+    font-family: "JBMono", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+.one-body-left-item-input, .one-body-right-item-input {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.two-columns-left, .two-columns-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+input {
+    width: 70px;
+    height: 17.5px;
+    padding: 0;
+    align-self: center;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+    font-family: "JBMono", sans-serif;
+    text-align: center;
+}
+
+.one-body-right-container {
+    display: grid;
+    justify-items: center;
+}
+
+.amount-p {
+    text-align: center;
+    font-family: "JBMono", sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.one-foot {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    align-items: center;
+    background-color: #a5f42b;
+}
+
+.one-foot-item-amount, .one-foot-item-p {
+    font-family: "JBMono", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.footer {
+    justify-self: center;
+    margin: 45px 0 35px 0;
+    font-size: 20px;
+    color: #787777;
+    font-family: "JBMono", sans-serif;
+    font-weight: 600;
+}
+
+@media (min-width: 1030px) and (max-width: 1150px) {
+    .mode {
+        width: 119px;
+        height: 34px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 55px;
+    }
+
+    .one-head {
+        font-size: 21px;
+    }
+
+    .one-item {
+        padding: 9px;
+    }
+
+    .play {
+        padding: 0 9px 0 0;
+    }
+
+    .grid-item {
+        font-size: 22px;
+    }
+
+    .one-body-left-item {
+        font-size: 14px;
+    }
+
+    input {
+        height: 14px;
+        font-size: 14px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin: 38px 0 30px 0;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1029px) {
+    .body {
+        padding: 0 100px 0 100px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 119px;
+        height: 34px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 45px;
+    }
+
+    .one-head {
+        font-size: 21px;
+    }
+
+    .one-item {
+        padding: 9px;
+    }
+
+    .play {
+        padding: 0 9px 0 0;
+    }
+
+    .grid-item {
+        font-size: 22px;
+    }
+
+    .one-body-left-item {
+        font-size: 14px;
+    }
+
+    input {
+        height: 14px;
+        font-size: 14px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin: 38px 0 30px 0;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 554px) and (max-width: 639px) {
+    .mode:hover {
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 0 black;
+        color: black;
+    }
+
+    .body {
+        padding: 0 100px 0 100px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 119px;
+        height: 34px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 35px;
+    }
+
+    .one-head {
+        font-size: 21px;
+    }
+
+    .one-item {
+        padding: 9px;
+    }
+
+    .play {
+        padding: 0 9px 0 0;
+    }
+
+    .grid-item {
+        font-size: 22px;
+    }
+
+    .one-body-left-item {
+        font-size: 14px;
+    }
+
+    input {
+        height: 14px;
+        font-size: 14px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin: 38px 0 30px 0;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 468px) and (max-width: 553px) {
+    .mode:hover {
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 0 black;
+        color: black;
+    }
+
+    .body {
+        padding: 0 100px 0 100px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 93px;
+        height: 27px;
+        font-size: 11px;
+        transition: 0.3s;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 30px;
+    }
+
+    .one-head {
+        font-size: 16px;
+    }
+
+    .one-item {
+        padding: 7px;
+    }
+
+    .play {
+        padding: 0 7px 0 0;
+    }
+
+    .grid-item {
+        font-size: 17px;
+    }
+
+    .one-body-left-item {
+        font-size: 11px;
+    }
+
+    input {
+        height: 11px;
+        font-size: 11px;
+        margin-top: 9.5px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 11px;
+    }
+
+    .footer {
+        margin: 30px 0 23px 0;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 467px) {
+    .mode:hover {
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 0 black;
+        color: black;
+    }
+
+    .body {
+        padding: 0 40px 0 40px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 94px;
+        height: 27px;
+        font-size: 67%;
+        transition: 0.3s;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 30px;
+    }
+
+    .one-head {
+        font-size: 16px;
+    }
+
+    .one-body {
+        grid-template-columns: 3fr auto;
+    }
+
+    .one-item {
+        padding: 7px;
+    }
+
+    .play {
+        padding: 0 10px 0 0;
+    }
+
+    .grid-item {
+        font-size: 13px;
+    }
+
+    .one-body-left-item {
+        font-size: 11px;
+    }
+
+    input {
+        margin-top: 11px;
+        height: 11px;
+        font-size: 9px;
+        border: 1px solid #787777;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 11px;
+    }
+
+    .footer {
+        margin: 30px 0 23px 0;
+        font-size: 13px;
+    }
+}

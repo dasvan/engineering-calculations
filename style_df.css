@@ -18,7 +18,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     margin: 20px;
 }
@@ -27,6 +27,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.backPage {
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    font-family: "JBMono", sans-serif;
+    font-weight: 600;
+    padding: 0;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    border: solid 2px black;
+    cursor: pointer;
+    color: black;
+    box-shadow: 5px 5px 0 black;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
 }
 
 .mode {
@@ -47,7 +70,7 @@ body {
     transition: 0.3s;
 }
 
-.mode:hover {
+.mode:hover, .back:hover {
     box-shadow: 10px 10px 0 black;
     bottom: 3px;
     right: 3px;
@@ -136,7 +159,7 @@ input {
     height: 17.5px;
     padding: 0;
     align-self: center;
-    margin: 10px 0 0 0;
+    margin: 10px 10px 0 0;
     cursor: pointer;
     font-family: "JBMono", sans-serif;
     text-align: center;
@@ -156,7 +179,7 @@ input {
 
 .one-foot {
     display: grid;
-    grid-template-columns: 2fr 64px;
+    grid-template-columns: 2fr auto;
     align-items: center;
     background-color: #a5f42b;
 }
@@ -285,6 +308,13 @@ input {
 }
 
 @media (min-width: 524px) and (max-width: 639px) {
+    .mode:hover {
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 0 black;
+        color: black;
+    }
+
     .body {
         padding: 0 100px 0 100px;
     }
@@ -343,6 +373,13 @@ input {
 }
 
 @media (min-width: 468px) and (max-width: 523px) {
+    .mode:hover {
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 0 black;
+        color: black;
+    }
+
     .body {
         padding: 0 100px 0 100px;
     }
@@ -386,9 +423,9 @@ input {
     }
 
     input {
-        height: 11px;
+        margin-top: 10px;
+        height: 10px;
         font-size: 11px;
-        margin-top: 9.5px;
     }
 
     .one-foot-item-amount, .one-foot-item-p {
@@ -402,6 +439,13 @@ input {
 }
 
 @media (min-width: 300px) and (max-width: 467px) {
+    .mode:hover {
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 0 black;
+        color: black;
+    }
+
     .body {
         padding: 0 40px 0 40px;
     }
@@ -449,8 +493,8 @@ input {
     }
 
     input {
-        margin-top: 12px;
-        height: 12px;
+        margin-top: 11px;
+        height: 11px;
         font-size: 9px;
         border: 1px solid #787777;
     }
@@ -459,8 +503,12 @@ input {
         font-size: 11px;
     }
 
+    .one-foot-item-p {
+        text-align: end;
+    }
+
     .footer {
         margin: 30px 0 23px 0;
         font-size: 13px;
     }
-}
+ }

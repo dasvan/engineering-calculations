@@ -7,6 +7,6 @@ the title "drilling fluids" for mud engineer, and "directional drilling" for dri
 
 the site will be improved
 
-upd. created a title "directional drilling" where can do culculations. add a third title "value converter" at the main page.
+upd. created a title "directional drilling" where can do calculations. add a third title "value converter" at the main page.
 website improvements continue.
 

@@ -1,0 +1,591 @@
+@font-face {
+    font-family: "JBMono";
+    src: url("fonts/JetBrainsMono.ttf");
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.body-black {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-bottom: black solid 2px;
+}
+
+.header-black {
+    border-bottom: white solid 2px;
+}
+
+.header-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back {
+    font-family: "JBMono", sans-serif;
+    font-weight: 600;
+    padding: 0;
+    background-color: white;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    border: solid 2px black;
+    cursor: pointer;
+    color: black;
+    box-shadow: 5px 5px 0 black;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.mode {
+    font-family: "JBMono", sans-serif;
+    font-weight: 600;
+    padding: 0;
+    background-color: white;
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    border: solid 2px black;
+    cursor: pointer;
+    color: black;
+    box-shadow: 5px 5px 0 black;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.mode:hover, .back:hover {
+    box-shadow: 10px 10px 0 black;
+    bottom: 3px;
+    right: 3px;
+}
+
+.button-black {
+    color: white;
+    border: solid 2px rgb(124, 124, 131);
+    background-color: black;
+    box-shadow: 5px 5px 0 rgb(124, 124, 131);
+}
+
+.button-black:hover {
+    box-shadow: 10px 10px 0 rgb(93, 93, 97);
+    bottom: 3px;
+    right: 3px;
+}
+
+.body {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 80px 160px 0 160px;
+}
+
+.paragraph {
+    font-size: 65px;
+    font-family: "JBMono", sans-serif;
+    font-weight: 1000;
+    margin: 25px 0 35px 0;
+    transition: 0.3s;
+}
+
+.items {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 25px;
+}
+
+.body-items {
+    height: 100%;
+}
+
+.one-head {
+    font-size: 25px;
+    font-family: "JBMono", sans-serif;
+    font-weight: 800;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #eacba0;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.grid-item {
+    font-size: 25px;
+}
+
+.play {
+    align-self: center;
+    padding: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.one-item {
+    padding: 10px;
+}
+
+.one, .two, .three, .four, .five, .six {
+    display: grid;
+    grid-template-rows: 53px auto 48.5px;
+}
+
+.one-body {
+    display: grid;
+    grid-template-columns: 2fr auto;
+}
+
+.body-items {
+    border: black solid 2px;
+    box-shadow: 5px 5px 0 black;
+}
+
+.body-items-black {
+    border: rgb(124, 124, 131) solid 2px;
+    box-shadow: 5px 5px 0 rgb(93, 93, 97);
+}
+
+.one-body-left-item {
+    padding: 10px 0 0 10px;
+    font-family: "JBMono", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+.one-body-left-item-input, .one-body-right-item-input {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.two-columns-left, .two-columns-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+input {
+    height: 19.5px;
+    width: 70px;
+    padding: 0;
+    background-color: white;
+    border: black solid 1px;
+    color: white;
+    align-self: center;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+    font-family: "JBMono", sans-serif;
+    text-align: center;
+}
+
+.input-black {
+    background-color: rgb(30, 30, 35);
+    border: rgb(93, 93, 97) solid 1px;
+    color: white;
+}
+
+.one-body-right-container {
+    display: grid;
+    justify-items: center;
+}
+
+.amount-p {
+    text-align: center;
+    font-family: "JBMono", sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.one-foot {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    align-items: center;
+    background-color: #a5f42b;
+}
+
+.one-foot-black {
+    color: #a5f42b;
+    background-color: rgb(30, 30, 35);
+}
+
+.amount-p-black {
+    color: #a5f42b;
+}
+
+.grid-black {
+    background-color: rgb(30, 30, 35);
+}
+
+.one-foot-item-amount, .one-foot-item-p {
+    font-family: "JBMono", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.footer {
+    justify-self: center;
+    margin: 45px 0 35px 0;
+    font-size: 20px;
+    color: #787777;
+    font-family: "JBMono", sans-serif;
+    font-weight: 600;
+}
+
+@media (min-width: 1030px) and (max-width: 1150px) {
+    .mode {
+        width: 119px;
+        height: 34px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .back {
+        height: 34px;
+        width: 68px;
+        font-size: 14px;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 55px;
+    }
+
+    .one-head {
+        font-size: 21px;
+    }
+
+    .one-item {
+        padding: 9px;
+    }
+
+    .play {
+        padding: 0 9px 0 0;
+    }
+
+    .grid-item {
+        font-size: 22px;
+    }
+
+    .one-body-left-item {
+        font-size: 14px;
+    }
+
+    input {
+        height: 16.5px;
+        font-size: 14px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin: 38px 0 30px 0;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1029px) {
+    .body {
+        padding: 80px 100px 0 100px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 119px;
+        height: 34px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .back {
+        height: 34px;
+        width: 68px;
+        font-size: 14px;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 45px;
+    }
+
+    .one-head {
+        font-size: 21px;
+    }
+
+    .one-item {
+        padding: 9px;
+    }
+
+    .play {
+        padding: 0 9px 0 0;
+    }
+
+    .grid-item {
+        font-size: 22px;
+    }
+
+    .one-body-left-item {
+        font-size: 14px;
+    }
+
+    input {
+        height: 16.5px;
+        font-size: 14px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin: 38px 0 30px 0;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 554px) and (max-width: 639px) {
+    .mode:hover {
+        bottom: 0;
+        right: 0;
+        box-shadow: 5px 5px 0 black;
+        color: black;
+    }
+
+    .body {
+        padding: 80px 100px 0 100px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 119px;
+        height: 34px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .back {
+        height: 34px;
+        width: 68px;
+        font-size: 14px;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 35px;
+    }
+
+    .one-head {
+        font-size: 21px;
+    }
+
+    .one-item {
+        padding: 9px;
+    }
+
+    .play {
+        padding: 0 9px 0 0;
+    }
+
+    .grid-item {
+        font-size: 22px;
+    }
+
+    .one-body-left-item {
+        font-size: 14px;
+    }
+
+    input {
+        height: 16.5px;
+        font-size: 14px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin: 38px 0 30px 0;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 468px) and (max-width: 553px) {
+    .body {
+        padding: 80px 100px 0 100px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 94px;
+        height: 27px;
+        font-size: 67%;
+        transition: 0.3s;
+    }
+
+    .back {
+        height: 27px;
+        width: 54px;
+        font-size: 11px;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 30px;
+    }
+
+    .one-head {
+        font-size: 16px;
+    }
+
+    .one-item {
+        padding: 7px;
+    }
+
+    .play {
+        padding: 0 7px 0 0;
+    }
+
+    .grid-item {
+        font-size: 17px;
+    }
+
+    .one-body-left-item {
+        font-size: 11px;
+    }
+
+    input {
+        height: 12.5px;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 11px;
+    }
+
+    .footer {
+        margin: 30px 0 23px 0;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 467px) {
+    .body {
+        padding: 80px 40px 0 40px;
+    }
+
+    .items {
+        grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    }
+
+    .mode {
+        width: 94px;
+        height: 27px;
+        font-size: 67%;
+        transition: 0.3s;
+    }
+
+    .back {
+        height: 27px;
+        width: 54px;
+        font-size: 67%;
+    }
+
+    .one, .two, .three, .four, .five, .six {
+        grid-template-rows: 45px auto 41.2px;
+    }
+    .paragraph {
+        font-size: 30px;
+    }
+
+    .one-head {
+        font-size: 16px;
+    }
+
+    .one-body {
+        grid-template-columns: 3fr auto;
+    }
+
+    .one-item {
+        padding: 7px;
+    }
+
+    .play {
+        padding: 0 10px 0 0;
+    }
+
+    .grid-item {
+        font-size: 13px;
+    }
+
+    .one-body-left-item {
+        font-size: 11px;
+    }
+
+    input {
+        margin-top: 10px;
+        height: 12.5px;
+        font-size: 9px;
+        border: 1px solid #787777;
+    }
+
+    .one-foot-item-amount, .one-foot-item-p {
+        font-size: 11px;
+    }
+
+    .footer {
+        margin: 30px 0 23px 0;
+        font-size: 13px;
+    }
+}

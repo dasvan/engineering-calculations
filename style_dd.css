@@ -530,7 +530,7 @@ input {
     }
 
     .mode {
-        width: 94px;
+        width: 100px;
         height: 27px;
         font-size: 67%;
         transition: 0.3s;

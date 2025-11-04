@@ -166,7 +166,7 @@ body {
 
 @media (min-width: 300px) and (max-width: 699px) {
     .mode {
-        width: 94px;
+        width: 100px;
         height: 27px;
         font-size: 67%;
     }

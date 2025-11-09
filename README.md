@@ -11,3 +11,4 @@ upd. created a title "directional drilling" where can do calculations. add a thi
 
 website improvements continue.
 
+https://dasvan.github.io/engineering-calculations/
